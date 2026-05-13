@@ -1,0 +1,1290 @@
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #E74C3C;
+  --primary-light: #FADBD8;
+  --secondary-color: #9B59B6;
+  --accent-color: #F1C40F;
+  --success-color: #27AE60;
+  --warning-color: #F39C12;
+  --danger-color: #E74C3C;
+  --text-color: #2C3E50;
+  --text-light: #7F8C8D;
+  --bg-color: #F8F9FA;
+  --card-bg: #FFFFFF;
+  --border-color: #E8E8E8;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* App 容器 */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--bg-color);
+}
+
+/* 头部 */
+.app-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 16px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-icon {
+  color: white;
+}
+
+.app-header h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.header-user {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+/* 主内容区 */
+.app-main {
+  flex: 1;
+  padding-bottom: 80px;
+  overflow-y: auto;
+}
+
+/* 底部导航 */
+.app-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid var(--border-color);
+  z-index: 100;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 12px;
+  gap: 4px;
+  padding: 4px 12px;
+  transition: color 0.2s;
+}
+
+.nav-item.active {
+  color: var(--primary-color);
+}
+
+.nav-item span {
+  font-size: 11px;
+}
+
+/* 页面基础样式 */
+.page {
+  padding: 16px;
+}
+
+/* 欢迎页面 */
+.home-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  text-align: center;
+}
+
+.welcome-content {
+  padding: 40px 20px;
+}
+
+.welcome-icon {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.welcome-content h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.welcome-content p {
+  color: var(--text-light);
+  margin-bottom: 30px;
+}
+
+/* 区块样式 */
+.section {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* 阶段卡片 */
+.phase-card {
+  border-radius: 16px;
+  padding: 20px;
+  background: linear-gradient(135deg, #FFF5F5, #FFE8E8);
+}
+
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.phase-emoji {
+  font-size: 32px;
+}
+
+.phase-title h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.phase-day {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.phase-description {
+  font-size: 14px;
+  color: var(--text-color);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.phase-predictions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.prediction-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.ovulation-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-color);
+}
+
+.phase-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.no-phase {
+  text-align: center;
+  padding: 20px;
+}
+
+/* 建议卡片 */
+.advice-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.advice-card {
+  background: var(--bg-color);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.advice-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.advice-card h4 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.advice-card p {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* 快捷操作 */
+.action-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 12px;
+  background: var(--bg-color);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background: var(--primary-light);
+  color: var(--primary-color);
+}
+
+/* 代谢卡片 */
+.metabolism-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.metabolism-card {
+  text-align: center;
+  padding: 16px;
+  background: var(--bg-color);
+  border-radius: 12px;
+}
+
+.metabolism-value {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.metabolism-label {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+/* 按钮样式 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #C0392B;
+}
+
+.btn-secondary {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.btn-secondary:hover {
+  background: var(--border-color);
+}
+
+.btn-danger {
+  background: var(--danger-color);
+  color: white;
+}
+
+.btn-large {
+  padding: 14px 24px;
+  font-size: 16px;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--text-light);
+  border-radius: 8px;
+}
+
+.btn-icon:hover {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* 表单样式 */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.form-group .error {
+  display: block;
+  font-size: 12px;
+  color: var(--danger-color);
+  margin-top: 4px;
+}
+
+.form-group .hint {
+  display: block;
+  font-size: 12px;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-divider {
+  text-align: center;
+  margin: 24px 0 16px;
+  position: relative;
+}
+
+.form-divider::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.form-divider span {
+  background: white;
+  padding: 0 16px;
+  position: relative;
+  color: var(--text-light);
+  font-size: 13px;
+}
+
+/* 设置页面 */
+.setup-page {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.setup-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.setup-header h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.setup-header p {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.setup-form {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* 周期页面 */
+.current-phase {
+  text-align: center;
+  padding: 24px;
+}
+
+.phase-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.cycle-day {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.days-until {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+/* 预测卡片 */
+.predictions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.prediction-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.prediction-icon {
+  font-size: 24px;
+}
+
+.prediction-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.prediction-label {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.prediction-value {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* 统计 */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  text-align: center;
+}
+
+.stat-item {
+  padding: 12px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+/* 日历 */
+.calendar-section {
+  background: white;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.calendar-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.weekday {
+  font-size: 12px;
+  color: var(--text-light);
+  padding: 8px 0;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.calendar-day.period {
+  background: var(--primary-color);
+  color: white;
+}
+
+.calendar-day.today {
+  border: 2px solid var(--primary-color);
+  font-weight: 600;
+}
+
+/* 阶段列表 */
+.phases-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.phase-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.phase-item.active {
+  background: var(--primary-light);
+}
+
+.phase-item:hover {
+  background: var(--border-color);
+}
+
+.phase-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.phase-info {
+  flex: 1;
+}
+
+.phase-info h4 {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.phase-info p {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.info-icon {
+  color: var(--text-light);
+}
+
+/* 历史记录 */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: var(--bg-color);
+  border-radius: 10px;
+}
+
+.history-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-date .date {
+  font-weight: 600;
+}
+
+.history-date .year {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.history-duration {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  color: var(--danger-color);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* 弹窗 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 20px;
+}
+
+.modal {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.modal-large {
+  max-width: 450px;
+}
+
+.modal h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modal-header h3 {
+  margin-bottom: 0;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+.modal-content {
+  margin-bottom: 16px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* 阶段详情弹窗 */
+.phase-detail-modal {
+  padding: 0;
+}
+
+.phase-detail-header {
+  padding: 24px;
+  text-align: center;
+  color: white;
+}
+
+.phase-detail-emoji {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.phase-detail-content {
+  padding: 20px;
+}
+
+.phase-detail-content .phase-description {
+  margin-bottom: 20px;
+}
+
+.advice-section {
+  margin-bottom: 16px;
+}
+
+.advice-section h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.advice-section p {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* 分类标签 */
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.category-tab {
+  padding: 8px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  background: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.category-tab.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* 选项网格 */
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.option-grid.small {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.option-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 10px;
+  background: var(--bg-color);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.option-btn.selected {
+  background: var(--primary-light);
+  border-color: var(--primary-color);
+}
+
+.option-emoji {
+  font-size: 24px;
+}
+
+.option-label {
+  font-size: 12px;
+}
+
+/* 日期选择 */
+.date-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.date-picker {
+  padding: 10px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.current-phase-hint {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 记录摘要 */
+.record-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--bg-color);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.summary-emoji {
+  font-size: 18px;
+}
+
+.record-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* 记录列表 */
+.records-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.record-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-color);
+  border-radius: 10px;
+}
+
+.record-date {
+  font-weight: 600;
+  min-width: 40px;
+}
+
+.record-emojis {
+  display: flex;
+  gap: 4px;
+  font-size: 18px;
+}
+
+.record-phase {
+  margin-left: auto;
+  font-size: 18px;
+}
+
+/* 空状态 */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-light);
+}
+
+.empty-state p {
+  margin-bottom: 16px;
+}
+
+/* 数据看板 */
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.overview-card {
+  text-align: center;
+  padding: 16px 12px;
+  background: var(--bg-color);
+  border-radius: 12px;
+}
+
+.overview-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.overview-value {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.overview-label {
+  font-size: 11px;
+  color: var(--text-light);
+}
+
+/* 最近7天 */
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.day-cell {
+  text-align: center;
+  padding: 12px 4px;
+  background: var(--bg-color);
+  border-radius: 8px;
+}
+
+.day-cell.has-record {
+  background: var(--primary-light);
+}
+
+.day-date {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.day-indicator {
+  font-size: 16px;
+}
+
+/* 图表 */
+.chart-container {
+  margin-top: 12px;
+}
+
+/* 阶段心情分析 */
+.phase-mood-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.phase-mood-card {
+  padding: 14px;
+  background: var(--bg-color);
+  border-radius: 12px;
+  border-left: 4px solid;
+}
+
+.phase-mood-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.phase-mood-stats {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.phase-mood-stats .stat {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* 代谢信息 */
+.metabolism-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metabolism-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: var(--bg-color);
+  border-radius: 8px;
+}
+
+.metabolism-item .label {
+  color: var(--text-light);
+}
+
+.metabolism-item .value {
+  font-weight: 600;
+}
+
+/* 设置页面 */
+.settings-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.settings-tabs .tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.settings-tabs .tab.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.options-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: var(--primary-light);
+  border-radius: 10px;
+  font-size: 13px;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+}
+
+.option-category {
+  margin-bottom: 20px;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.category-header h4 {
+  font-size: 15px;
+}
+
+.category-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.add-option-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.add-option-form input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.emoji-input {
+  width: 50px !important;
+  text-align: center;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--bg-color);
+  border-radius: 8px;
+}
+
+.option-item .option-emoji {
+  font-size: 20px;
+}
+
+.option-item .option-label {
+  flex: 1;
+  font-size: 14px;
+}
+
+.default-badge {
+  font-size: 10px;
+  padding: 2px 6px;
+  background: var(--border-color);
+  border-radius: 4px;
+  color: var(--text-light);
+}
+
+.option-item .delete {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.option-item:hover .delete {
+  opacity: 1;
+}
+
+.metabolism-display {
+  margin-top: 20px;
+  padding: 16px;
+  background: var(--bg-color);
+  border-radius: 12px;
+}
+
+.metabolism-display h4 {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.metabolism-values {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  text-align: center;
+}
+
+.metabolism-values .value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.metabolism-values .label {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+/* 数据管理 */
+.data-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 关于 */
+.about-content {
+  text-align: center;
+  color: var(--text-light);
+}
+
+.about-content p {
+  margin-bottom: 4px;
+}
+
+.about-desc {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* 响应式 */
+@media (max-width: 380px) {
+  .option-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .predictions {
+    grid-template-columns: 1fr;
+  }
+  
+  .phase-mood-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,90 @@
+export const defaultCustomOptions = {
+  moods: [
+    { id: 'happy', label: '愉悦', emoji: '😊', color: '#FFD93D' },
+    { id: 'calm', label: '平静', emoji: '😌', color: '#6BCB77' },
+    { id: 'anxious', label: '焦虑', emoji: '😰', color: '#FF6B6B' },
+    { id: 'sad', label: '低落', emoji: '😢', color: '#4D96FF' },
+    { id: 'irritated', label: '烦躁', emoji: '😤', color: '#FF9F45' },
+  ],
+  exercises: [
+    { id: 'running', label: '跑步', emoji: '🏃‍♀️', caloriesPerHour: 400 },
+    { id: 'yoga', label: '瑜伽', emoji: '🧘‍♀️', caloriesPerHour: 200 },
+    { id: 'strength', label: '力量训练', emoji: '💪', caloriesPerHour: 350 },
+    { id: 'swimming', label: '游泳', emoji: '🏊‍♀️', caloriesPerHour: 450 },
+    { id: 'walking', label: '散步', emoji: '🚶‍♀️', caloriesPerHour: 150 },
+    { id: 'cycling', label: '骑行', emoji: '🚴‍♀️', caloriesPerHour: 400 },
+    { id: 'dance', label: '舞蹈', emoji: '💃', caloriesPerHour: 350 },
+    { id: 'pilates', label: '普拉提', emoji: '🤸‍♀️', caloriesPerHour: 250 },
+  ],
+  meals: [
+    { id: 'breakfast', label: '早餐', emoji: '🍳' },
+    { id: 'lunch', label: '午餐', emoji: '🍱' },
+    { id: 'dinner', label: '晚餐', emoji: '🍲' },
+    { id: 'snack', label: '零食', emoji: '🍪' },
+    { id: 'dessert', label: '甜点', emoji: '🍰' },
+    { id: 'coffee', label: '咖啡', emoji: '☕' },
+  ],
+  symptoms: [
+    { id: 'headache', label: '头痛', emoji: '🤕' },
+    { id: 'bloating', label: '腹胀', emoji: '🫄' },
+    { id: 'breast_pain', label: '乳房胀痛', emoji: '💔' },
+    { id: 'acne', label: '痘痘', emoji: '🔴' },
+    { id: 'back_pain', label: '腰酸', emoji: '😣' },
+    { id: 'insomnia', label: '失眠', emoji: '😩' },
+    { id: 'cramps', label: '痛经', emoji: '🩸' },
+    { id: 'fatigue', label: '疲劳', emoji: '😴' },
+    { id: 'appetite', label: '食欲不振', emoji: '🤢' },
+  ],
+  bowel: [
+    { id: 'normal', label: '正常', emoji: '✅' },
+    { id: 'constipation', label: '便秘', emoji: '😣' },
+    { id: 'diarrhea', label: '腹泻', emoji: '💩' },
+  ],
+};
+
+export const cyclePhases = {
+  menstrual: {
+    name: '经期',
+    emoji: '🩸',
+    color: '#E74C3C',
+    description: '雌激素和孕激素下降，子宫内膜脱落。可能感到疲惫、腹痛。',
+    exerciseAdvice: '以舒缓运动为主：瑜伽、散步、拉伸。避免高强度运动，倾听身体感受。',
+    dietAdvice: '补铁食物（菠菜、红肉）、温热食物、避免生冷。多喝温水，可喝姜茶暖宫。',
+    lifeTips: '注意保暖、保证睡眠、减少压力。适合放松休息，避免重要社交活动。',
+  },
+  follicular: {
+    name: '卵泡期',
+    emoji: '🌸',
+    color: '#9B59B6',
+    description: '雌激素逐渐上升，卵泡发育。精力恢复，心情好转，皮肤状态改善。',
+    exerciseAdvice: '精力充沛期！适合：跑步、力量训练、HIIT、舞蹈。可以尝试新的运动项目。',
+    dietAdvice: '高蛋白、复合碳水、新鲜蔬果。可适当增加运动量，补充足够蛋白质。',
+    lifeTips: '社交好时机、尝试新事物、皮肤状态较好。适合安排重要会议或约会。',
+  },
+  ovulation: {
+    name: '排卵期',
+    emoji: '✨',
+    color: '#F1C40F',
+    description: '雌激素达到峰值，排卵发生。精力最旺盛，魅力值up！',
+    exerciseAdvice: '最佳运动期！挑战高强度训练、突破个人记录。力量训练效果最佳。',
+    dietAdvice: '均衡营养、抗氧化食物（莓果、绿茶）。保持水分，注意蛋白质摄入。',
+    lifeTips: '状态最佳期、适合重要会议/约会。社交活动、演讲、面试的好时机。',
+  },
+  luteal: {
+    name: '黄体期',
+    emoji: '🌙',
+    color: '#3498DB',
+    description: '孕激素上升，经前综合征可能出现。情绪波动、食欲增加、可能水肿。',
+    exerciseAdvice: '逐渐降低强度：瑜伽、散步、游泳。倾听身体感受，不要勉强。',
+    dietAdvice: '控制甜食、补充镁（坚果、黑巧克力）、减少盐分（防水肿）。多喝水。',
+    lifeTips: '注意情绪管理、减少咖啡因、提前安排轻松活动。适合整理、规划类工作。',
+  },
+};
+
+export const activityLevels = [
+  { id: 'sedentary', label: '久坐', description: '很少或几乎不运动', multiplier: 1.2 },
+  { id: 'light', label: '轻度活动', description: '每周运动1-3天', multiplier: 1.375 },
+  { id: 'moderate', label: '中度活动', description: '每周运动3-5天', multiplier: 1.55 },
+  { id: 'active', label: '活跃', description: '每周运动6-7天', multiplier: 1.725 },
+  { id: 'very_active', label: '非常活跃', description: '体力劳动或每天高强度训练', multiplier: 1.9 },
+];
